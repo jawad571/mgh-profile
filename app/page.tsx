@@ -9,7 +9,7 @@ export default function Home() {
         <div className="mb-6">
           <div className="w-24 h-24 bg-[#FFC300] rounded-full mb-4"></div>
           <h1 className="text-4xl md:text-6xl font-bold text-[#FFC300]">
-            MGH Prolife
+            MGH Services
           </h1>
           <p className="text-lg mt-4 max-w-xl mx-auto text-[#DCDCDC]">
             Empowering lives through holistic health, physiotherapy & wellness.
@@ -24,7 +24,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-gray-900">
         <h2 className="text-3xl font-bold text-[#FFC300] mb-6 text-center">About Us</h2>
         <p className="max-w-3xl mx-auto text-center text-[#DCDCDC]">
-          MGH Prolife is committed to providing innovative health and wellness solutions
+          MGH Services is committed to providing innovative health and wellness solutions
           designed for modern lifestyles. Our mission is to deliver care that goes
           beyond treatment—nurturing mind, body, and spirit.
         </p>
@@ -61,7 +61,7 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-20 px-6 text-center">
         <h2 className="text-3xl font-bold text-[#FFC300] mb-6">Contact Us</h2>
-        <p className="mb-4 text-[#DCDCDC]">Email: contact@mghprolife.com | Phone: +91-XXXX-XXXXXX</p>
+        <p className="mb-4 text-[#DCDCDC]">Email: contact@mghServices.com | Phone: +91-XXXX-XXXXXX</p>
         <Button type="default" className="border-[#FFC300] text-[#FFC300] hover:bg-[#FFC300] hover:text-black">
           Send a Message
         </Button>
@@ -69,7 +69,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center py-6 bg-black text-[#DCDCDC]">
-        &copy; 2025 MGH Prolife. All rights reserved.
+        &copy; 2025 MGH Services. All rights reserved.
       </footer>
     </main>
   );
