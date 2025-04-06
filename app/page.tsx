@@ -1,103 +1,76 @@
-import Image from "next/image";
+import React from "react";
+import { Button } from "antd";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="bg-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+        <div className="mb-6">
+          <div className="w-24 h-24 bg-yellow-500 rounded-full mb-4"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-yellow-500">
+            MGH Prolife
+          </h1>
+          <p className="text-lg mt-4 max-w-xl mx-auto">
+            Empowering lives through holistic health, physiotherapy & wellness.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <Button type="primary" className="bg-yellow-500 border-none text-black hover:bg-yellow-400">
+          Get in Touch
+        </Button>
+      </section>
+
+      {/* About Us */}
+      <section className="py-20 px-6 bg-gray-900">
+        <h2 className="text-3xl font-bold text-yellow-500 mb-6 text-center">About Us</h2>
+        <p className="max-w-3xl mx-auto text-center">
+          MGH Prolife is committed to providing innovative health and wellness solutions
+          designed for modern lifestyles. Our mission is to deliver care that goes
+          beyond treatment—nurturing mind, body, and spirit.
+        </p>
+      </section>
+
+      {/* Services */}
+      <section className="py-20 px-6">
+        <h2 className="text-3xl font-bold text-yellow-500 mb-10 text-center">Our Services</h2>
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {['Physiotherapy', 'Wellness Programs', 'Corporate Health Events'].map((service, i) => (
+            <div key={i} className="bg-gray-800 p-6 rounded-2xl shadow-md">
+              <h3 className="text-xl font-semibold text-yellow-400 mb-2">{service}</h3>
+              <p>
+                Tailored programs crafted by certified professionals to promote recovery,
+                fitness and holistic well-being.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Portfolio */}
+      <section className="py-20 px-6 bg-gray-900">
+        <h2 className="text-3xl font-bold text-yellow-500 mb-10 text-center">Portfolio</h2>
+        <div className="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="bg-gray-700 h-40 rounded-xl flex items-center justify-center text-gray-400">
+              Image Placeholder {i + 1}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold text-yellow-500 mb-6">Contact Us</h2>
+        <p className="mb-4">Email: contact@mghprolife.com | Phone: +91-XXXX-XXXXXX</p>
+        <Button type="default" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black">
+          Send a Message
+        </Button>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 bg-black text-gray-500">
+        &copy; 2025 MGH Prolife. All rights reserved.
       </footer>
-    </div>
+    </main>
   );
 }
