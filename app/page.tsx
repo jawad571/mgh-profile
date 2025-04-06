@@ -1,12 +1,21 @@
-import React from "react";
+'use client';
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "antd";
 
 export default function Home() {
+
   return (
     <main className="bg-black text-white font-sans">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-        <div className="mb-6">
+       {/* Hero Section */}
+       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        {/* Shimmer background */}
+        <div
+          className="absolute inset-0 gold-shimmer pointer-events-none"
+        />
+
+        {/* Content */}
+        <div className="mb-6 relative z-10">
           <div className="w-24 h-24 bg-[#FFC300] rounded-full mb-4"></div>
           <h1 className="text-4xl md:text-6xl font-bold text-[#FFC300]">
             MGH Services
@@ -15,10 +24,11 @@ export default function Home() {
             Empowering lives through holistic health, physiotherapy & wellness.
           </p>
         </div>
-        <Button className="border-none !text-black hover:bg-[#FFC300] !bg-[#FFC300]">
+        <Button className="relative z-10 border-none !text-black hover:bg-[#FFC300] !bg-[#FFC300]">
           Get in Touch
         </Button>
       </section>
+
 
       {/* About Us */}
       <section className="py-20 px-6 bg-gray-900">
